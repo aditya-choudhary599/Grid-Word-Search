@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Word Search in Grid</title>
+</head>
+
+<body class="bg-dark text-light">
+
+    <!-- Main Content Container -->
+    <div id="content-container" class="container mt-4">
+
+        <h2 class="text-center mb-4 display-4 text-primary font-weight-bold">Explore the Word Grid</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label for="rows" class="bg-dark text-light">Enter number of rows:</label>
+                <input type="number" id="rows" class="form-control bg-dark text-light" placeholder="Enter rows">
+            </div>
+            <div class="col-md-4">
+                <label for="cols" class="bg-dark text-light">Enter number of columns:</label>
+                <input type="number" id="cols" class="form-control bg-dark text-light" placeholder="Enter columns">
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <label for="matrixData" class="bg-dark text-light">Enter matrix data:</label>
+            <textarea id="matrixData" class="form-control bg-dark text-light"
+                placeholder="Enter matrix data"></textarea>
+        </div>
+
+        <div class="mt-3">
+            <label for="algo_chosen" class="bg-dark text-light">Choose the algorithm for game : </label>
+            <select class="form-select form-select-sm bg-dark text-light" name="algo_chosen" id="algo_chosen">
+                <option selected value="0">------</option>
+                <option value="1">Uniform Fashion</option>
+                <option value="2">Non-uniform Fashion</option>
+            </select>
+        </div>
+
+        <button onclick="generateTable()" class="btn btn-primary mt-3">Generate Table</button>
+
+        <div id="table-container" class="mt-4">
+            <!-- Table will be dynamically generated here -->
+        </div>
+
+        <div id="textarea-container" class="mt-4">
+            <!-- Textarea will be dynamically generated here -->
+        </div>
+
+        <div class="row">
+            <div id="not-found-container" class="col-md-6">
+                <!-- Not found words reporting area -->
+            </div>
+
+            <div id="found-container" class="col-md-6">
+                <!-- Found words reporting area -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="algorithms.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
